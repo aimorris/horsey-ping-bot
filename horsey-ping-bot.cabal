@@ -10,3 +10,4 @@ executable horsey-ping-bot
   build-depends:       base
                      , text
                      , discord-haskell
+                     , unliftio

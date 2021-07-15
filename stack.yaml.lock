@@ -18,6 +18,13 @@ packages:
       sha256: dd9ea90a631342e5db0fc21331ade4d563a685e9125d5a3989eefa8e1b96c6c6
   original:
     hackage: emoji-0.1.0.2
+- completed:
+    hackage: unliftio-0.2.13@sha256:14409c70eba13edfcca7564f7bccca298e49d6e21679a8894ac757f2f6008696,3325
+    pantry-tree:
+      size: 2229
+      sha256: 3121d447d33ca873adc604de4daff705f57592717acff671b55003b617ffe247
+  original:
+    hackage: unliftio-0.2.13
 snapshots:
 - completed:
     size: 532177
