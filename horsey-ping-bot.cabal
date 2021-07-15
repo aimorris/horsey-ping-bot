@@ -1,0 +1,12 @@
+cabal-version:       2.0
+name:                horsey-ping-bot
+version:             0.0.1
+build-type:          Simple
+
+executable horsey-ping-bot
+  main-is:             src/Main.hs
+  default-language:    Haskell2010
+  ghc-options:         -threaded
+  build-depends:       base
+                     , text
+                     , discord-haskell

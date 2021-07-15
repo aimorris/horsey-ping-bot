@@ -1,0 +1,6 @@
+resolver: lts-16.20
+
+extra-deps:
+- discord-haskell-1.8.8 
+      # check hackage to get the most recent available version
+- emoji-0.1.0.2
