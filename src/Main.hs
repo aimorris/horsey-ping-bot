@@ -29,7 +29,8 @@ import Discord.Types
       Message (messageChannel),
       User (userIsBot), UpdateStatusOpts (UpdateStatusOpts) )
 import qualified Discord.Requests as R
-  ( ChannelRequest(CreateReaction), UserRequest (GetCurrentUserGuilds) )
+  ( ChannelRequest(CreateReaction, CreateMessage),
+    UserRequest (GetCurrentUserGuilds) )
 
 main :: IO ()
 main = do
@@ -61,8 +62,10 @@ startHandler = do
 eventHandler :: Event -> DiscordHandler ()
 eventHandler e =
   case e of
-    MessageCreate m -> when (not (fromBot m) && pingsUser m) $ do
-      void $ restCall (R.CreateReaction (messageChannel m, messageId m) "horseyping")
+    MessageCreate m ->
+      when (not (fromBot m) && pingsUser m)
+      $ void
+      $ restCall (R.CreateReaction (messageChannel m, messageId m) "horseyping:857042585029050368")
     _ -> return ()
 
 fromBot :: Message -> Bool
